@@ -16,7 +16,7 @@ class DataLoader:
             data = pd.read_csv(TALENT_DATA_FILE)
             print(f"Loaded {len(data)} talent profiles")
             
-            # Basic validation
+            # Validation
             required_columns = ['First Name', 'Last Name', 'Skills', 'Job Types', 'Software']
             missing_columns = [col for col in required_columns if col not in data.columns]
             
@@ -69,7 +69,7 @@ class DataLoader:
     
     @staticmethod
     def preprocess_data(data):
-        """Basic data preprocessing"""
+        """Data preprocessing"""
         if data is None:
             return None
         
