@@ -2,7 +2,7 @@ import os
 from config.settings import JOB_REQUIREMENTS
 
 class ConsoleInterface:
-    """Basic console interface for the recommendation system"""
+    """Console interface for the recommendation system"""
     
     @staticmethod
     def show_welcome():
