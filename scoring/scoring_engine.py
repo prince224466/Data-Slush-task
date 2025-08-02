@@ -6,13 +6,13 @@ from config.settings import (
 from services.gemini_service import GeminiService
 
 class ScoringEngine:
-    """Basic scoring engine for talent evaluation"""
+    """Scoring engine for talent evaluation"""
     
     def __init__(self):
         self.gemini_service = GeminiService()
     
     def calculate_score(self, talent_profile, job_requirements):
-        """Calculate basic score for talent-job match"""
+        """Calculate score for talent-job match"""
         score = 0
         
         # Skill matching
@@ -55,7 +55,7 @@ class ScoringEngine:
             if software.strip() in talent_software:
                 score += SOFTWARE_MATCH_WEIGHT
         
-        # Basic AI analysis for high-scoring candidates
+        # AI analysis for high-scoring candidates
         if score > MIN_SCORE_FOR_AI_ANALYSIS:
             try:
                 talent_description = talent_profile.get('Profile Description', '')
