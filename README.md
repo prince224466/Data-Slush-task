@@ -2,7 +2,7 @@
 
 ## Overview
 
-This talent recommendation system for DataSlush matches creators with potential talent based on job requirements. The system uses text embeddings and Gemini AI for basic analysis and provides recommendations for job postings.
+This talent recommendation system for DataSlush matches creators with potential talent based on job requirements. The system uses text embeddings and Gemini AI for analysis and provides recommendations for job postings.
 
 ## Project Structure
 
@@ -21,7 +21,7 @@ Data-Slush-task/
 ├── services/
 │   └── gemini_service.py           # Gemini API service
 ├── scoring/
-│   └── scoring_engine.py           # Basic scoring algorithm
+│   └── scoring_engine.py           # Scoring algorithm
 ├── ui/
 │   └── console_interface.py        # User interface
 └── data/
@@ -31,8 +31,8 @@ Data-Slush-task/
 
 ## Features
 
-- **Basic Talent Matching**: Scoring algorithm using skills, location, and budget
-- **Gemini AI Integration**: Uses Google's Gemini API for basic personality analysis
+- **Talent Matching**: Scoring algorithm using skills, location, and budget
+- **Gemini AI Integration**: Uses Google's Gemini API for personality analysis
 - **Top 10 Recommendations**: Provides recommendations for each job posting
 - **Interactive Console**: Console-based interface for viewing recommendations
 
@@ -79,11 +79,11 @@ The system will:
 
 ### Data Processing
 - Uses pandas for data loading and manipulation
-- Basic text preprocessing with TF-IDF vectorization
+- Text preprocessing with TF-IDF vectorization
 - Text representation combining talent attributes
 
 ### Scoring Algorithm
-The scoring system considers basic factors:
+The scoring system considers all factors:
 - Skill matching: +15 points per matching skill
 - Location matching: +25 points for location match
 - Budget compatibility: +20 points if talent rate fits budget
@@ -92,7 +92,7 @@ The scoring system considers basic factors:
 - AI analysis: +2 points per AI score (for high-scoring candidates only)
 
 ### AI Integration
-- Integrates with Google's Gemini API for basic personality analysis
+- Integrates with Google's Gemini API for personality analysis
 - Analyzes talent descriptions against job requirements
 - Provides additional scoring based on AI insights
 
@@ -110,5 +110,5 @@ The scoring system considers basic factors:
 - **utils/data_loader.py**: Data loading and validation utilities
 - **models/embedding_model.py**: TF-IDF embedding generation and storage
 - **services/gemini_service.py**: Gemini API integration service
-- **scoring/scoring_engine.py**: Basic scoring algorithm implementation
+- **scoring/scoring_engine.py**: Scoring algorithm implementation
 - **ui/console_interface.py**: Console user interface 
